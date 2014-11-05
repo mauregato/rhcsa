@@ -58,3 +58,7 @@ systemctl --host roo@server1 status httpd.service
 
 
 Capitulo 7. OpenSSH
+
+Capitulo 8. TigerVNC
+NOTA: se ha cambiado el fichero de configuración por defecto (/etc/sysconfig/vncserver) por el utilizado por systemd
+/lib/systemd/system/vncserver@service
