@@ -1,1 +1,60 @@
 Guia RHCSA
+Caputilo 6 
+
+comandos systemd:
+systemctl stop/start/restart name.service, ejemplo:
+systemctl stop firewalld.service
+
+habilitar/deshabilitar un servicio
+systemctl enable/disable firewalld.service
+
+ver listado de servicios (todos los instalados)
+systemctl list-unit-files --type service --all
+
+ver listado de servicos activos
+systemctl list-units --type service
+
+si queremos deshabilitar un servicio para que ya sea lo arranquemos a mano o por otro servicio lo marcamos (mark)
+
+systemctl mark name.service
+
+esto sustituye /etc/systemd/system/name.service por un link simbolico a /dev/null
+
+para deshacer esto ejeuctamos
+systemctl unmask name.service
+
+En Rhel7 se sustituye los runlevels por targets, podemos verlos ejecutando
+systemctl list-units --type target
+
+para cambiar el target (runlevel) en la sessión actual
+systemctl isolate name.target
+
+para cambiarlo definitivo
+systemctl set-default name.target
+
+para ver el target por defecto
+systemctl get-default
+
+para ver todos los targets cargados
+systemctl list-units --type target 
+añadimos --all para ver todos 
+
+para iniciar en modo rescate
+systemctl rescue 
+
+sino queremos mandar mensaje a los usuarios conectados añadimos --no-wall rescue
+
+modo emergency
+systemctl emergency 
+
+arranca con el modo mínimo para repara el sistema.
+
+systemctl sirve para apagar, reinicar o suspender el sistema
+
+Se puede conrolar systemd remotamente, vía SSH,
+
+systemctl --host user@host command ejmplo
+systemctl --host roo@server1 status httpd.service
+
+
+Capitulo 7. OpenSSH
