@@ -1,9 +1,5 @@
-Guia RHCSA Michael Jang
-Capitulo 2
-
-
-
-
+Guia RHCSA
+Capitulo 6 
 
 comandos systemd:
 systemctl stop/start/restart name.service, ejemplo:
@@ -60,3 +56,9 @@ Se puede conrolar systemd remotamente, vía SSH,
 systemctl --host user@host command ejmplo
 systemctl --host roo@server1 status httpd.service
 
+
+Capitulo 7. OpenSSH
+
+Capitulo 8. TigerVNC
+NOTA: se ha cambiado el fichero de configuración por defecto (/etc/sysconfig/vncserver) por el utilizado por systemd
+/lib/systemd/system/vncserver@service
