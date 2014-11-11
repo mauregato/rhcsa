@@ -1,0 +1,31 @@
+Capitulo 2
+self test
+1
+kvm
+kvm_intel
+2
+virt-manager
+3
+virsh start vm
+4
+/var/lib/libvirtd
+5
+virt-install --prompt
+6
+system-config-kickstart
+7
+anaconda-ks.cfg
+8
+network
+9
+url
+10
+%post
+11
+-l 
+12
+-X
+13
+telnet 192.168.122.1 25
+14
+nmap 192.168.122.1

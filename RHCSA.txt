@@ -1,7 +1,6 @@
 Guia RHCSA Michael Jang
 Capitulo 2
-pag 82
-
+pag 128 lab1 por hacer
 
 
 
